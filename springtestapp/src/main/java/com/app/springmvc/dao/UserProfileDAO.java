@@ -14,6 +14,7 @@ public class UserProfileDAO extends AbstractDAO<UserProfile, Integer> {
     public UserProfileDAO() {
         super(UserProfile.class);
     }
+//my local 
 
 //	public UserProfile findById(int id) {
 //		return getByKey(id);
