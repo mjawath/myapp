@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<bean id="helloBean" class="com.mycompany.entityfortestspring.TestBean">
+<!--		<property name="name" value="Mkyong" />-->
+	</bean>
+
+
+	<bean id="helloBean2" class="com.mycompany.entityfortestspring.TestBean">
+<!--		<property name="name" value="Mkyong" />-->
+	</bean>
+
+</beans>
