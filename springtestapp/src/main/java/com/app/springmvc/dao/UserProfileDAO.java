@@ -38,5 +38,5 @@ public class UserProfileDAO extends AbstractDAO<UserProfile, Integer> {
                 .getResultList();
         return userProfiles;
     }
-
+//ohhai
 }
