@@ -19,6 +19,10 @@ public class Config {
     public TestBean getTest() {
         return new TestBean();
     }
+    
+    
+    
+    
 
 //    @Bean
 //    public StandardServiceRegistry getRegistry() {

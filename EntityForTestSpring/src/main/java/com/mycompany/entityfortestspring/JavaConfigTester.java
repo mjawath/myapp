@@ -5,11 +5,10 @@
  */
 package com.mycompany.entityfortestspring;
 
-import com.entity.MicroMarket;
-import java.util.Date;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+
+//import javax.persistence.EntityManager;
+//import javax.persistence.EntityManagerFactory;
+//import javax.persistence.Persistence;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -20,19 +19,20 @@ public class JavaConfigTester {
 
     private static AnnotationConfigApplicationContext annotationContext;
 
+    
     public static void init() {
-        annotationContext = new AnnotationConfigApplicationContext(Config.class);
+        annotationContext = new AnnotationConfigApplicationContext(Config.class,JpaConfiguration.class);
         TestBean bean2 = annotationContext.getBean(TestBean.class);
         bean2.print();
-        MicroMarket c = new MicroMarket();
-        c.setZipCode(String.valueOf(new Date())+Math.random());
-
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("TestPU");
-        EntityManager em = emf.createEntityManager();
-        em.getTransaction().begin();
-        em.persist(c);
-        em.getTransaction().commit();
-        emf.close();
+//        MicroMarket c = new MicroMarket();
+//        c.setZipCode(String.valueOf(new Date())+Math.random());
+//
+//        EntityManagerFactory emf = Persistence.createEntityManagerFactory("TestPU");
+//        EntityManager em = emf.createEntityManager();
+//        em.getTransaction().begin();
+//        em.persist(c);
+//        em.getTransaction().commit();
+//        emf.close();
         System.out.println("end of termition");
 
     }

@@ -3,18 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.entityfortestspring;
+package com.dao;
 
 /**
  *
- * @author LENOVO PC
+ * @author AJawath
  */
-public class TestMain {   
-    
-    public static void main(String[] args) {    
-   
-        JavaConfigTester.init();
-
-    }    
+public class ItemRepository {
     
 }

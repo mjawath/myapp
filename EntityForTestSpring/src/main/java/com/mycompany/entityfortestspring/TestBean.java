@@ -5,11 +5,16 @@
  */
 package com.mycompany.entityfortestspring;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
 /**
  *
  * @author LENOVO PC
  */
 public class TestBean {
+  
+
 
     private static int x=0;
     public TestBean() {
@@ -18,8 +23,7 @@ public class TestBean {
 
     
     
-    public void print() {
-       
+    public void print() {       
         System.out.println(" -------------888888888988883843858385838534#4#$#$3$#$3$#4--------- ");
         System.out.println("              xxxxxxxxxxxxxxxxxxx          "+x);
 
