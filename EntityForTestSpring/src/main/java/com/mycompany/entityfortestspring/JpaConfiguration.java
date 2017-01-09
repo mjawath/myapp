@@ -8,6 +8,7 @@ import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
@@ -21,7 +22,8 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@EnableJpaRepositories("com.app.springmvc.dao")
+@ComponentScan("com.dao")
+@EnableJpaRepositories("com.dao")
 @EnableTransactionManagement
 @PropertySource(value = {"classpath:application.properties"})
 public class JpaConfiguration {
@@ -50,7 +52,7 @@ public class JpaConfiguration {
         System.out.println("confing             ++++++++++++++++++++++++++++++++++LocalContainerEntityManagerFactoryBean");
         LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
         factoryBean.setDataSource(dataSource());
-        factoryBean.setPackagesToScan(new String[]{"com.app.springmvc.model"});
+        factoryBean.setPackagesToScan(new String[]{"com.entity"});
         factoryBean.setJpaVendorAdapter(jpaVendorAdapter());
         factoryBean.setJpaProperties(jpaProperties());
         return factoryBean;

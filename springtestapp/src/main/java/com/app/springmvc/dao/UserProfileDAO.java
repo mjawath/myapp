@@ -7,9 +7,10 @@ import javax.persistence.NoResultException;
 import org.springframework.stereotype.Repository;
 
 import com.app.springmvc.model.UserProfile;
+import com.dao.BaseDAOSF;
 
 @Repository("userProfileDao")
-public class UserProfileDAO extends AbstractDAO<UserProfile, Integer> {
+public class UserProfileDAO extends BaseDAOSF<UserProfile, Integer> {
 
     public UserProfileDAO() {
         super(UserProfile.class);

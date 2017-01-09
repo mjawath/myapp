@@ -5,10 +5,22 @@
  */
 package com.dao;
 
+import com.entity.Item;
+import org.springframework.stereotype.Repository;
+
 /**
- *
+ *Base dao class which acts between  spring simple jpa repositry
  * @author AJawath
  */
-public class ItemRepository {
+@Repository
+public class ItemRepository extends BaseDAOSF<Item, Long>{
+    
+    public ItemRepository() {
+        super(Item.class);
+    }
+    
+    public void test(){
+        System.out.println("test");
+    }
     
 }

@@ -5,16 +5,30 @@
  */
 package com.mycompany.entityfortestspring;
 
+import com.dao.ItemRepository;
+import com.dao.TestRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 /**
  *
  * @author LENOVO PC
  */
 public class TestMain {   
     
+    @Autowired
+    ItemRepository ir;
+    
     public static void main(String[] args) {    
-   
-        JavaConfigTester.init();
+       AnnotationConfigApplicationContext    annotationContext = new AnnotationConfigApplicationContext(Config.class,JpaConfiguration.class);
 
+       annotationContext.getAutowireCapableBeanFactory();
+       
+        ItemRepository repo =annotationContext.getBean(ItemRepository.class);
+        repo.test();
+
+        
+        
     }    
     
 }

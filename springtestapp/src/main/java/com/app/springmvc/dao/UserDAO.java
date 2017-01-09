@@ -8,11 +8,12 @@ import javax.persistence.NoResultException;
 import org.springframework.stereotype.Repository;
 
 import com.app.springmvc.model.User;
+import com.dao.BaseDAOSF;
 import javax.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Repository("userDao")
-public class UserDAO extends AbstractDAO<User, Integer> {
+public class UserDAO extends BaseDAOSF<User, Integer> {
 
     
     public UserDAO() {
