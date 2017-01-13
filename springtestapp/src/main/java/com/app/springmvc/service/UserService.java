@@ -5,11 +5,13 @@ import java.util.List;
 
 import com.app.springmvc.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.transaction.annotation.Transactional;
 
 @org.springframework.stereotype.Service
 @Transactional
-public class UserService  extends Service<User, Integer>{
+@Qualifier("userService")
+public class UserService  extends Service<User>{
 
     @Autowired
     private UserDAO dao;
@@ -55,5 +57,10 @@ public class UserService  extends Service<User, Integer>{
     public boolean isUserSSOUnique(Integer id, String sso) {
         User user = findBySSO(sso);
         return (user == null || ((id != null) && (user.getId() == id)));
+    }
+
+    public void getByID(String userName,String password){
+        System.out.println("this is all about "+userName+"       " +password);
+        
     }
 }

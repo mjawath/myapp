@@ -5,14 +5,13 @@
  */
 package com.app.springmvc.service;
 
-import java.io.Serializable;
 import java.util.List;
 
 /**
  *
  * @author LENOVO PC
  */
-public class Service<T, ID extends Serializable>  {
+public class Service<T>  {
 
    public List<T> findAll(){
     return null;
@@ -20,7 +19,7 @@ public class Service<T, ID extends Serializable>  {
 
 
 
-    public T findById(ID id){
+    public T findById(Object id){
     return null;
     }
 

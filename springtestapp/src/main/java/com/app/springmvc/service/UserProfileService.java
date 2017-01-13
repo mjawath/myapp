@@ -5,14 +5,16 @@ import java.util.List;
 
 import com.app.springmvc.model.UserProfile;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.transaction.annotation.Transactional;
 
 @org.springframework.stereotype.Service("userProfileService")
 @Transactional
-public class UserProfileService extends Service<UserProfile, Integer>{
+public class UserProfileService extends Service<UserProfile>{
 
     @Autowired
-    UserProfileDAO dao;  
+    @Qualifier("userProfileDao")
+    private UserProfileDAO dao;  
     
 
     public UserProfile findById(Integer id) {
@@ -26,4 +28,6 @@ public class UserProfileService extends Service<UserProfile, Integer>{
     public List<UserProfile> findAll() {
         return dao.findAll();
     }
+    
+
 }
