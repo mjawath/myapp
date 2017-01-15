@@ -4,6 +4,7 @@ import com.app.springmvc.dao.UserProfileDAO;
 import java.util.List;
 
 import com.app.springmvc.model.UserProfile;
+import com.mycompany.entitybase.service.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,6 +13,13 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class UserProfileService extends Service<UserProfile>{
 
+    public UserProfileService() {
+        super();
+        System.out.println("init ###############3");
+    }
+
+    
+    
     @Autowired
     @Qualifier("userProfileDao")
     private UserProfileDAO dao;  

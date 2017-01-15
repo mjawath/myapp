@@ -6,6 +6,7 @@
 package com.mycompany.entitybase.dao;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.annotation.PostConstruct;
 
 import javax.persistence.EntityManager;
@@ -63,5 +64,10 @@ public class BaseDAOJPA<T, ID extends Serializable> implements BaseDAO<T, ID>{
     @PostConstruct
     public void postConstruct() {
         //TODO - overrides
+    }
+
+    @Override
+    public List<T> findAll() {
+            return null;
     }
 }

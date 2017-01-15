@@ -29,19 +29,23 @@ import org.springframework.beans.factory.annotation.Qualifier;
 public class AppController {
 
     @Autowired
-    @Qualifier("userService")
-            
-    UserService userService;
-
-    @Autowired
     @Qualifier("userProfileService")
     UserProfileService userProfileService;
 
     @Autowired
+    @Qualifier("userService")
+    UserService userService;
+
+    @Autowired
     MessageSource messageSource;
+    
+    public AppController() {
+//    userProfileService = new UserProfileService();
+//    userService = new UserService();
+    }
 
-    String myx = "sfsdf";
-
+    
+    
     /**
      * This method will list all existing users.
      */
@@ -50,7 +54,7 @@ public class AppController {
 
         List<User> users = userService.findAllUsers();
         model.addAttribute("users", users);
-        System.out.println("===========4444444444444444444444444===============" + myx);
+
         int x = 25;
         show();
         return "userslist";

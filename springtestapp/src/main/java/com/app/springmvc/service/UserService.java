@@ -4,6 +4,7 @@ import com.app.springmvc.dao.UserDAO;
 import java.util.List;
 
 import com.app.springmvc.model.User;
+import com.mycompany.entitybase.service.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.transaction.annotation.Transactional;
@@ -59,8 +60,8 @@ public class UserService  extends Service<User>{
         return (user == null || ((id != null) && (user.getId() == id)));
     }
 
-    public void getByID(String userName,String password){
-        System.out.println("this is all about "+userName+"       " +password);
-        
+    public String getByID(String userName,String password){
+        System.out.println("this is all about "+userName+"       " +password);        
+        return "";
     }
 }

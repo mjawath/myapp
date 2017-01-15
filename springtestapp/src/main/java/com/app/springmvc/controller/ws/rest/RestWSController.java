@@ -1,16 +1,15 @@
-package com.app.springmvc.controller;
+package com.app.springmvc.controller.ws.rest;
 
-import com.app.springmvc.service.Service;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import com.mycompany.entitybase.service.IService;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/ws/v1")
 public class RestWSController<T> {
 
-    protected Service service;//will be setter injected
+    protected IService service;//will be setter injected
     
     @RequestMapping("/test")
     protected String testRest(String txt) {
@@ -43,7 +42,7 @@ public class RestWSController<T> {
     
     
 //    @Autowired
-    public void setService(Service service){
+    public void setService(IService service){
         this.service=service;
     }
     

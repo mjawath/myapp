@@ -44,13 +44,36 @@
         </dependency>
 
 
+        <!--//added this to respect the @transaction  bcas transaction uses aspectj to do the work-->
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.8.10</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.8.10</version>
+        </dependency>
+
+<!--//added this to respect the @transaction  bcas transaction uses aspectj to do the work-->
+
         <!--spring-data-jpa-->
   
-            <dependency>
-                <groupId>org.springframework.data</groupId>
-                <artifactId>spring-data-jpa</artifactId>
-                <version>1.10.6.RELEASE</version>
-            </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>1.10.6.RELEASE</version>
+        </dependency>
 
         <!-- Hibernate -->
         <dependency>
@@ -90,7 +113,7 @@
             <version>10.13.1.1</version>
         </dependency>
         
-                <!--sqlite database-->        
+        <!--sqlite database-->        
         <!-- https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc -->
         <dependency>
             <groupId>org.xerial</groupId>
@@ -137,6 +160,13 @@
             <artifactId>EntityForTestSpring</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        
+        <dependency>
+            <groupId>com.mycompany</groupId>
+            <artifactId>EntityBase</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
                         	
     </dependencies>
 

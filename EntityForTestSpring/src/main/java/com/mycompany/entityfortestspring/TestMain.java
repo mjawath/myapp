@@ -6,7 +6,7 @@
 package com.mycompany.entityfortestspring;
 
 import com.dao.ItemRepository;
-import com.dao.TestRepo;
+import com.dao.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -22,13 +22,10 @@ public class TestMain {
     public static void main(String[] args) {    
        AnnotationConfigApplicationContext    annotationContext = new AnnotationConfigApplicationContext(Config.class,JpaConfiguration.class);
 
-       annotationContext.getAutowireCapableBeanFactory();
-       
-        ItemRepository repo =annotationContext.getBean(ItemRepository.class);
-        repo.test();
-
-        
-        
+//       ItemRepository repo =annotationContext.getBean(ItemRepository.class);
+//       repo.test();      
+      ItemService repo =annotationContext.getBean(ItemService.class);
+       repo.findAll();          
     }    
     
 }

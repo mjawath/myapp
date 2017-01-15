@@ -13,7 +13,7 @@ import com.app.springmvc.service.UserProfileService;
 @Component
 public class RoleToUserProfileConverter implements Converter<Object, UserProfile>{
 
-	@Autowired
+//	@Autowired
 	UserProfileService userProfileService;
 
 	/**
