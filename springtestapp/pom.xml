@@ -2,9 +2,9 @@
          xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.websystique.springmvc</groupId>
+    <groupId>com.mycompany</groupId>
     <artifactId>springtest</artifactId>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
     <version>1.0.0</version>
     <name>springtest</name>
 
